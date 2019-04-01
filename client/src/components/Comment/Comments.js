@@ -6,6 +6,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
+import distanceInWordsToNow from "date-fns/distance_in_words_to_now";
 
 const Comments = ({ comments, classes }) => (
   <List className={classes.root}>
@@ -15,7 +16,7 @@ const Comments = ({ comments, classes }) => (
           <Avatar src={comment.author.picture} alt={comment.author.name} />
         </ListItemAvatar>
         <ListItemText
-          parymary={comment.text}
+          primary={comment.text}
           secondary={
             <>
               <Typography
@@ -25,6 +26,7 @@ const Comments = ({ comments, classes }) => (
               >
                 {comment.author.name}
               </Typography>
+              {distanceInWordsToNow(Number(comment.createdAt))} ago
             </>
           }
         />
