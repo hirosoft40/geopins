@@ -6,7 +6,7 @@ const resolvers = require("./resolvers");
 const { findOrCreateUser } = require("./controllers/userController");
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.MONGO_URI, {
     // remove a reprecation warning from Mongoose
     useNewUrlParser: true
   })
@@ -32,6 +32,6 @@ const server = new ApolloServer({
   }
 });
 
-server.listen().then(({ url }) => {
+server.listen({ port: process.env.PORT || 4000}).then(({ url }) => {
   console.log(`server listening on ${url}`);
 });
