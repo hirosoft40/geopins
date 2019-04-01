@@ -15,8 +15,3 @@ course from Udemy
 <li>Cloudinary : Image Upload</li>
 </ul>
 
-## Study Plan
-<li><a href = 'https://www.udemy.com/build-a-realtime-app-with-react-hooks-and-graphql/'>React Hooks and GraphQL by Reed Barger</li>
-5 hours course
-3/29 Section 3 to section 8
-3/30 Section 9
